@@ -1,0 +1,103 @@
+/*
+    Mario Santana - Bio Link
+
+*/
+/* Importação (Google) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* CSS Reset */
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+/* Fonte */
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+}
+
+/* Layout */
+.Container {
+    margin: 0 auto;
+    background-color: #ffafaf;
+}
+
+.Flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    background-color: #fdff90;
+}
+
+.Botao {
+    display: inline-block;
+    padding: 0.5em 1em;
+    background-color: #201818;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+/* Destaque */
+
+main {
+    height: 400px;
+    background-color: #ffafaf;
+    color: #201818;
+    text-align: center;
+    padding: 2em;
+}
+
+/* Smartphone portrait */
+
+
+/* Cabeçalho */
+header {
+    height: 60px;
+}
+
+/* Smarthphone landscape */
+@media (min-width: 576px){
+    body {
+        background-color: #411717;
+    }
+    /* Layout */
+    .Container {
+        max-width: 540px;
+    }
+}
+/* Tablet portrait */
+@media (min-width: 768px){
+    body {
+        background-color: #16867d;
+    }
+    /* Layout */
+    .Container {
+        max-width: 720px;
+    }
+}
+/* Tablet landscape */
+@media (min-width: 992px){
+    body {
+        background-color: #b90aa2;
+    }
+    /* Layout */
+    .Container {
+        max-width: 960px;
+    }
+}
+/* Desktop */
+@media (min-width: 1200px){
+    body {
+        background-color: #d4d9ec;
+    }
+    /* Layout */
+    .Container {
+        max-width: 1140px;
+    }
+}
