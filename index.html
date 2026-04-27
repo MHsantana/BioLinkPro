@@ -1,72 +1,63 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bio Link - Mario Santana</title>
-    <meta name="description" content="Bem-vindo ao meu biolink.">
-    <link rel="icon" href="img/favicon.png">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bio Link - Mario Santana</title>
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Bem-vindo ao meu biolink.">
+  <link rel="icon" href="assets/img/favicon.jpg">
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- cabeçalho -->
-    <header id="Home">
-        <div class="Container Flex">
-            <div id="logo">
-                <img src="img/logo.png" alt="hal 9000">
-            </div>
-            <nav>
-                <input type="checkbox" id="check">
-                <label for="check">&#x268c;</label>
-                <ul>
-                    <li><a href="#Home">Home</a></li>
-                    <li><a href="#Sobre">Sobre</a></li>
-                    <li><a href="#">One page</a></li>
-                    <li><a href="#">Wireframe</a></li>
-                    <li><a href="#Conteudo">Conteúdo</a></li>
-            </nav>
-        </div>
-    </header>
-    <!-- destaque -->
-    <main>  
-        <div class="Container">
-        <h1>HTML5 e CSS</h1>
-        <h2>Você faz, você vê</h2>
-        <a href="https://youtu.be"
-        target="_blank" class="Botao">Videos!</a>
-        </div>
-    </main>
-    <!-- sobre -->
-    <section id="Sobre">
-        <div class="Container">
-        <h2>Aprender na prática</h2>
-        </div>
-    </section>
-    <!-- one page -->
-    <section>
-        <div class="Container">
-        <h2>One page site</h2>
-        </div>
-    </section>
-    <!-- wireframe -->
-    <section>
-        <div class="Container">
-        <h2> wireframe</h2>
-        </div>
-    </section>
-    <!-- conteúdo -->
-    <section id="Conteudo">
-        <div class="Container">
-        <h2>Conteúdo</h2>
-        <h3>teste</h3>
-        </div>
-    </section>
-    <!-- rodapé -->
-    <footer>
-        <div class="Container">
+  <main class="page">
+    <article class="card">
+      <!-- Perfil -->
+      <header class="profile">
+        <img src="assets/img/perfil.jpg" alt="Foto Perfil Mario" class="photo">
+        <h1>Mario Henrique Gimenes Santana</h1>
+        <p class="bio">
+          Estudante de ciência de dados, formado em engenharia mecânica e com 1 ano de experência em engenharia de dados.
+        </p>
+      </header>
+      <!-- Botões-->
+      <nav class="links">
+        <a href="https://github.com/MHsantana" rel="noopener noreferrer" target="_blank" class="btn github">GitHub</a>
+        <a href="https://www.linkedin.com/in/mario-santana-122b2abb/" rel="noopener noreferrer" target="_blank" class="btn linkedin">LinkedIn</a>
+        <a href="mailto:mhgsantana_pro2@hotmail.com" target="_blank" class="btn email">Email</a>
+        <a href="https://wa.me/5513981871486" target="_blank" class="btn whatsapp">WhatsApp</a>
+        <a href="contato.vcf" download class="btn vcard">Salvar contato</a>
+      </nav>
+      <!-- Rodapé -->
+      <footer class="footer">
+        <p class="footer-title">Links rápidos</p>
 
+        <div class="footer-links">
+          <a href="https://github.com/MHsantana" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <img src="assets/img/github-brands-solid-full.svg" alt="GitHub" class="icon">
+          </a>
+
+          <a href="https://www.linkedin.com/in/mario-santana-122b2abb/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <img src="assets/img/linkedin-brands-solid-full.svg" alt="LinkedIn" class="icon">
+          </a>
+
+          <a href="mailto:mhgsantana_pro2@hotmail.com" target="_blank" aria-label="Email">
+            <img src="assets/img/envelope-open-solid-full.svg" alt="email" class="icon">
+          </a>
+
+          <a href="https://wa.me/5513981871486" target="_blank" aria-label="WhatsApp">
+            <img src="assets/img/whatsapp-brands-solid-full.svg" alt="WhatsApp" class="icon">
+          </a>
         </div>
-    </footer>
-    <a href="#Home" class="back-to-top">&#x25b2;</a>
+      </footer>
+
+    </article>
+  </main>
+
 </body>
 </html>

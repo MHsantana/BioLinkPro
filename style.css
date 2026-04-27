@@ -1,103 +1,196 @@
-/*
-    Mario Santana - Bio Link
-
-*/
-/* Importação (Google) */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-/* CSS Reset */
 * {
-    margin: 0;
-    border: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Fonte */
+:root {
+  color-scheme: light dark;
+
+  --bg-top: #eaf8ff;
+  --bg-mid: #b9e1ff;
+  --bg-bottom: #67afe8;
+
+  --card: rgba(255, 255, 255, 0.45);
+  --border: rgba(255, 255, 255, 0.6);
+
+  --text: #10324f;
+  --muted: #4f6d87;
+
+  --radius: 28px;
+}
+
+/* Modo Escuro */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-top: #07111f;
+    --bg-mid: #0d1d31;
+    --bg-bottom: #17385f;
+
+    --card: rgba(10, 16, 28, 0.65);
+    --border: rgba(255, 255, 255, 0.12);
+
+    --text: #eef7ff;
+    --muted: #a8bed3;
+  }
+}
+/* Corpo */
 body {
-    font-family: "Montserrat", sans-serif;
-    font-size: 1em;
+  min-height: 100dvh;
+  font-family: "Inter", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top, rgba(255,255,255,0.6), transparent 30%),
+    linear-gradient(180deg, var(--bg-top), var(--bg-mid), var(--bg-bottom));
 }
 
-/* Layout */
-.Container {
-    margin: 0 auto;
-    background-color: #ffafaf;
+/* Ajuste fonte */
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.Flex {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1em;
-    background-color: #fdff90;
+/* Centralização */
+.page {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
-.Botao {
-    display: inline-block;
-    padding: 0.5em 1em;
-    background-color: #201818;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 25px;
-    transition: background-color 0.3s ease;
+/* Card */
+.card {
+  width: min(100%, 520px);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px;
+  border-radius: var(--radius);
+
+  background: var(--card);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(18px);
+
+  box-shadow: 0 25px 70px rgba(0,0,0,0.15);
+
+  min-height: min(760px, calc(100vh - 40px));
+
+  animation: fadeIn 0.8s ease;
 }
 
-/* Destaque */
-
-main {
-    height: 400px;
-    background-color: #ffafaf;
-    color: #201818;
-    text-align: center;
-    padding: 2em;
+/* Perfil */
+.profile {
+  text-align: center;
 }
 
-/* Smartphone portrait */
+.photo {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
 
-
-/* Cabeçalho */
-header {
-    height: 60px;
+  border: 4px solid rgba(255,255,255,0.6);
+  animation: float 6s ease-in-out infinite;
 }
 
-/* Smarthphone landscape */
-@media (min-width: 576px){
-    body {
-        background-color: #411717;
-    }
-    /* Layout */
-    .Container {
-        max-width: 540px;
-    }
+.profile h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
 }
-/* Tablet portrait */
-@media (min-width: 768px){
-    body {
-        background-color: #16867d;
-    }
-    /* Layout */
-    .Container {
-        max-width: 720px;
-    }
+
+.bio {
+  color: var(--muted);
+  margin-top: 6px;
 }
-/* Tablet landscape */
-@media (min-width: 992px){
-    body {
-        background-color: #b90aa2;
-    }
-    /* Layout */
-    .Container {
-        max-width: 960px;
-    }
+
+/* Botões */
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
-/* Desktop */
-@media (min-width: 1200px){
-    body {
-        background-color: #d4d9ec;
-    }
-    /* Layout */
-    .Container {
-        max-width: 1140px;
-    }
+
+.btn {
+  padding: 14px;
+  border-radius: 14px;
+  text-align: center;
+  font-weight: 600;
+
+  background: rgba(255,255,255,0.3);
+  border: 1px solid var(--border);
+
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  background: rgba(255,255,255,0.5);
+}
+
+/* Cores */
+.github:hover { background: rgba(59,130,246,0.25); }
+.linkedin:hover { background: rgba(14,118,168,0.25); }
+.email:hover { background: rgba(168,85,247,0.25); }
+.whatsapp:hover { background: rgba(34,197,94,0.25); }
+
+/* Rodapé */
+.footer {
+  margin-top: auto;
+  text-align: center;
+}
+
+.footer-title {
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.footer-links a {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(255,255,255,0.3);
+  border: 1px solid var(--border);
+
+  transition: 0.2s;
+}
+
+.footer-links a:hover {
+  transform: translateY(-2px);
+}
+
+.icon {
+  width: 20px;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+/* Responsivo */
+@media (max-width: 420px) {
+  .card {
+    padding: 24px;
+  }
 }
