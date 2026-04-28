@@ -129,7 +129,7 @@ a {
   background: rgba(255,255,255,0.5);
 }
 
-/* Cores */
+/* Cores hover botão */
 .github:hover { background: rgba(59,130,246,0.25); }
 .linkedin:hover { background: rgba(14,118,168,0.25); }
 .email:hover { background: rgba(168,85,247,0.25); }
@@ -193,4 +193,55 @@ a {
   .card {
     padding: 24px;
   }
+}
+
+/* Modo Landscape */
+@media (max-height: 576px) and (orientation: landscape) {
+ .card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  padding: 18px;
+  gap: 18px;
+  width: min(100%, 920px);
+  min-height: calc(100dvh - 24px);
+  }
+
+.profile { 
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.links { 
+  grid-column: 2;
+  grid-row: 1;
+  align-self: center;
+  grid-row: 1 / span 2;
+  width: 100%;
+  max-width: 500px;
+}
+
+.footer-links { 
+  grid-column: 1; 
+  grid-row: 2;
+}
+
+.photo {
+  min-width: 150px;
+  min-height: 150px;
+  margin-bottom: 10px;
+}
+
+.profile h1 {
+  font-size: 1.5rem;
+}
+
+.bio {
+  max-width: 38ch;
+  margin-inline: auto;
+}
+
+.footer-title {
+  display: none;
+}
 }
